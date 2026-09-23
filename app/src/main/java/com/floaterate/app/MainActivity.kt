@@ -375,14 +375,14 @@ class MainActivity : AppCompatActivity() {
             gravity = Gravity.CENTER_VERTICAL
         }
         symbolInput = EditText(this).apply {
-            hint = "Custom pair, e.g. DOGEUSDT"
-            hintTextColor = muted
-            setTextColor(ink)
-            textSize = 13f
-            singleLine = true
-            imeOptions = EditorInfo.IME_ACTION_DONE
-            setPadding(dp(14), 0, dp(14), 0)
-            background = roundedBackground(surface, dp(14f), outline)
+    hint = "Custom pair, e.g. DOGEUSDT"
+    setHintTextColor(muted)
+    setTextColor(ink)
+    textSize = 13f
+    setSingleLine(true)
+    imeOptions = EditorInfo.IME_ACTION_DONE
+    setPadding(dp(14), 0, dp(14), 0)
+    background = roundedBackground(surface, dp(14f), outline)
             setOnEditorActionListener { _, actionId, _ ->
                 if (actionId == EditorInfo.IME_ACTION_DONE) {
                     selectSymbolFromInput()
